@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/main.css">
+	<title>Portfolio</title>
+</head>
+<body>
+	<header>
+		<div class="container" id="anchor">
+			<div class="Block">
+				<div class="TextBlock">
+					<div class="SOLOVIEV">
+						<h1>SOLOVIEV</h1>
+					</div>
+
+					<div class="ALEXANDR">
+						<h2>ALEXANDR</h2>
+					</div>
+
+					<div class="Junior">
+						<h3>Junior</h3>
+					</div>
+
+					<div class="Web">
+						<h4>Web developer</h4>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<section>
+		<div class="BlockAbout" id="anchor">
+			<h5 class="About">ABOUT ME</h5>
+		</div>
+	</section>
+
+	<footer>
+		
+	</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+<script>
+var anchors = [];
+var currentAnchor = -1;
+var isAnimating  = false;
+$(function(){
+    function updateAnchors() {
+        anchors = [];
+        $('#anchor').each(function(i, element){
+            anchors.push( $(element).offset().top );
+        });
+    }
+    $('body').on('mousewheel', function(e){
+        e.preventDefault();
+        e.stopPropagation();
+        if( isAnimating ) {
+            return false;
+        }
+        isAnimating  = true;
+        if( e.originalEvent.wheelDelta >= 0 ) {
+            currentAnchor--;
+        }else{
+            currentAnchor++;
+        }
+        if( currentAnchor > (anchors.length - 1) 
+           || currentAnchor < 0 ) {
+            currentAnchor = 0;
+        }
+        isAnimating  = true;
+        $('html, body').animate({
+            scrollTop: parseInt( anchors[currentAnchor] )
+        }, 500, 'swing', function(){
+            isAnimating  = false;
+        });
+    });
+    updateAnchors();   
+});
+</script>
+
+</body>
+
+</html>

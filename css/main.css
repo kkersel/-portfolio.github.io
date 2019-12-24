@@ -1,0 +1,84 @@
+body {
+	padding: 0;
+	margin: 0;
+	font-family: 'Alegreya Sans', sans-serif;
+	height: 100%;
+	background: #ff8686;
+	-webkit-user-select: none;
+}
+
+div {
+	box-sizing: 
+	border-box;
+}
+
+header {
+	background: #ff8686;
+	height: 990px;
+}
+
+section {
+	background: #fff;
+	height: 100px;
+}
+
+footer {
+	background: #dda6a6;
+	height: 1000px;
+}
+
+.container {
+	color: #fff;
+	width: 100%;
+    height: 100%;
+	margin: auto;
+	display: flex;
+	align-items: center;
+	align-content: center;
+	justify-content: center;
+}
+
+.Block {
+	width: 700px;
+}
+
+.SOLOVIEV {
+	font-size: 50px;
+	text-align: left;
+	line-height: 10px;
+}
+
+.ALEXANDR {
+	font-size: 72px;
+	text-align: right;
+	line-height: 10px;
+}
+
+.Junior {
+	font-size: 40px;
+	font-weight: bold;
+	text-align: left;
+	line-height: 10px;
+}
+
+.Web {
+	font-size: 50px;
+	text-align: right;
+	line-height: 10px;
+}
+
+.BlockAbout {
+	color: #000;
+	width: 100%;
+    height: 100%;
+	margin: auto;
+	display: flex;
+	align-items: center;
+	align-content: center;
+	justify-content: center;
+}
+
+.About {
+	color: #000;
+	font-size: 40px;
+}
